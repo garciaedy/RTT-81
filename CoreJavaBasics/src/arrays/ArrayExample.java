@@ -3,7 +3,7 @@ package arrays;
 public class ArrayExample {
 
 	public static void main(String[] args) {
-		
+
 		int arraySize = 10;
 
 		// this creates a new array of type double with 20 elements ... 0 to 19
@@ -31,7 +31,7 @@ public class ArrayExample {
 		for (String value : stringArray) {
 			System.out.println("The value = " + value);
 		}
-		
+
 		//separating content print statement 
 		System.out.println("=========================");
 
@@ -44,10 +44,10 @@ public class ArrayExample {
 			}
 		}
 		System.out.println("Number of nulls is " + nullCount);
-		
+
 		//separating content print statement 
 		System.out.println("=========================");
-		
+
 		// write a for loop that tells me the location of the first null in the array
 		// this is going to use the non-enhanced for loop
 		int firstNull = -1;
@@ -61,10 +61,10 @@ public class ArrayExample {
 
 		//separating content print statement 
 		System.out.println("=========================");
-		
-		
+
+
 		// write a for loop that tells me how many values are not null
-		
+
 		int notNullCount = 0;
 		for (String item : stringArray) {
 			if (item != null) {
@@ -73,14 +73,27 @@ public class ArrayExample {
 			}
 		}
 		System.out.println("Count of values in the array that are not null are " + notNullCount);
+
+		// way two
+		
+		int regNotNullCount =0;
+		
+		for (int pos = 0; pos< stringArray.length; pos++) {
+			if (stringArray[pos] != null) {
+				regNotNullCount = regNotNullCount + 1;
+			}
+		}
+		System.out.println("Count of values in the array that are not null are " + regNotNullCount);
+
+		
 		
 		
 		//separating content print statement 
 		System.out.println("=========================");
-		
-		
+
+
 		// write a for loop that tells me the last position of null in the array
-		
+
 
 		int lastNull = -1;
 		for (int pos2 = 0; pos2 < stringArray.length; pos2++) {
@@ -90,34 +103,45 @@ public class ArrayExample {
 
 		}
 		System.out.println("Position of the last null is " + lastNull);
-		
+
 		// write a for loop that starts at the final position in the array and counts down to the first
 		for (int i = stringArray.length - 1; i >= 0; i--) {
 			System.out.println("the value in position " + i + " is " + stringArray[i]);
 
 		}
-		
-		
+
+
 		//separating content print statement 
 		System.out.println("=========================");
-	
-		
+
 		// use letters.split(",") to make an array of letters
 		// loop over the array and count the number of letters that are not vowels
-		
+
 		String letters = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z";
 		
-		String[] lettersArray = letters.split(",");
-        
-        int nonVowelCount = 0;
-        for (String letter : lettersArray) {
-            if (!(letter.equals("a") || letter.equals("e") || letter.equals("i") || letter.equals("o") || letter.equals("u"))) {
-                nonVowelCount++;
-            }
-        }
 
-        System.out.println("Number of non-vowels: " + nonVowelCount);
-		
+		 //Split the string into an array using the split method, so we get each letter as a separate element in the array
+		String[] lettersArray = letters.split(",");
+
+		// Initialize a counter variable to keep track of non-vowel letters
+		int nonVowelCount = 0;
+
+		// Loop over each letter in the array
+		for (String letter : lettersArray) {
+
+			//Check if the letter is NOT a vowel (i.e., not 'a', 'e', 'i', 'o', or 'u')
+			// If it's not a vowel, increment the nonVowelCount by 1
+			if (!(letter.equals("a") || letter.equals("e") || letter.equals("i") || letter.equals("o") || letter.equals("u"))) {
+				nonVowelCount++;
+			}
+		}
+
+		//  Print the number of non-vowel letters
+		System.out.println("Number of non-vowels: " + nonVowelCount);
+
+	
+        
+        
 	}
 
 }
