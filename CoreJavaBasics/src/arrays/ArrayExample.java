@@ -24,13 +24,15 @@ public class ArrayExample {
 			System.out.println("The value in position " + pos + " is " + stringArray[pos]);
 		}
 
+		//separating content print statement 
 		System.out.println("=========================");
 
 		// enhanced for loop
 		for (String value : stringArray) {
 			System.out.println("The value = " + value);
 		}
-
+		
+		//separating content print statement 
 		System.out.println("=========================");
 
 		// write a for loop that counts the number of nulls in the array
@@ -43,6 +45,9 @@ public class ArrayExample {
 		}
 		System.out.println("Number of nulls is " + nullCount);
 		
+		//separating content print statement 
+		System.out.println("=========================");
+		
 		// write a for loop that tells me the location of the first null in the array
 		// this is going to use the non-enhanced for loop
 		int firstNull = -1;
@@ -54,6 +59,10 @@ public class ArrayExample {
 		}
 		System.out.println("Position of the first null is " + firstNull);
 
+		//separating content print statement 
+		System.out.println("=========================");
+		
+		
 		// write a for loop that tells me how many values are not null
 		
 		int notNullCount = 0;
@@ -66,6 +75,8 @@ public class ArrayExample {
 		System.out.println("Count of values in the array that are not null are " + notNullCount);
 		// write a for loop that tells me the last position of null in the array
 		
+		//separating content print statement 
+		System.out.println("=========================");
 		
 		
 		// write a for loop that starts at the final position in the array and counts down to the first
