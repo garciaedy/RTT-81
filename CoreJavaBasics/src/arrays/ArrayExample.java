@@ -73,19 +73,50 @@ public class ArrayExample {
 			}
 		}
 		System.out.println("Count of values in the array that are not null are " + notNullCount);
-		// write a for loop that tells me the last position of null in the array
+		
 		
 		//separating content print statement 
 		System.out.println("=========================");
 		
 		
-		// write a for loop that starts at the final position in the array and counts down to the first
+		// write a for loop that tells me the last position of null in the array
 		
-		String letters = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z";
+
+		int lastNull = -1;
+		for (int pos2 = 0; pos2 < stringArray.length; pos2++) {
+			if (stringArray[pos2] == null) {
+				lastNull = pos2;
+			}
+
+		}
+		System.out.println("Position of the last null is " + lastNull);
+		
+		// write a for loop that starts at the final position in the array and counts down to the first
+		for (int i = stringArray.length - 1; i >= 0; i--) {
+			System.out.println("the value in position " + i + " is " + stringArray[i]);
+
+		}
+		
+		
+		//separating content print statement 
+		System.out.println("=========================");
+	
 		
 		// use letters.split(",") to make an array of letters
 		// loop over the array and count the number of letters that are not vowels
 		
+		String letters = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z";
+		
+		String[] lettersArray = letters.split(",");
+        
+        int nonVowelCount = 0;
+        for (String letter : lettersArray) {
+            if (!(letter.equals("a") || letter.equals("e") || letter.equals("i") || letter.equals("o") || letter.equals("u"))) {
+                nonVowelCount++;
+            }
+        }
+
+        System.out.println("Number of non-vowels: " + nonVowelCount);
 		
 	}
 
