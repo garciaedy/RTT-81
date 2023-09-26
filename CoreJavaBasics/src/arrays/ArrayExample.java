@@ -8,11 +8,11 @@ public class ArrayExample {
 
 		// this creates a new array of type double with 20 elements ... 0 to 19
 		double[] doubleArray = new double[arraySize];
-
 		String[] stringArray = new String[arraySize];
 		stringArray[1] = "one";
 		stringArray[2] = "two";
 		stringArray[0] = "zero";
+		stringArray[8] = "eight";
 		stringArray[9] = "nine";
 
 		// this is going to fail and cause code execution to stop
@@ -52,9 +52,22 @@ public class ArrayExample {
 				break;
 			}
 		}
-		
+		System.out.println("Position of the first null is " + firstNull);
+
 		// write a for loop that tells me how many values are not null
+		
+		int notNullCount = 0;
+		for (String item : stringArray) {
+			if (item != null) {
+				notNullCount += 1;
+
+			}
+		}
+		System.out.println("Count of values in the array that are not null are " + notNullCount);
 		// write a for loop that tells me the last position of null in the array
+		
+		
+		
 		// write a for loop that starts at the final position in the array and counts down to the first
 		
 		String letters = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z";
@@ -63,7 +76,6 @@ public class ArrayExample {
 		// loop over the array and count the number of letters that are not vowels
 		
 		
-		System.out.println("Position of the first null is " + firstNull);
 	}
 
 }
