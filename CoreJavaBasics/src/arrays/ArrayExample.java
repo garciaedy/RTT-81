@@ -63,7 +63,8 @@ public class ArrayExample {
 		System.out.println("=========================");
 
 
-		// write a for loop that tells me how many values are not null
+		// write a for loop that tells me how many values are not null 
+		// This is the enhanced loop
 
 		int notNullCount = 0;
 		for (String item : stringArray) {
@@ -74,7 +75,7 @@ public class ArrayExample {
 		}
 		System.out.println("Count of values in the array that are not null are " + notNullCount);
 
-		// way two
+		// way two this an old style of loop
 		
 		int regNotNullCount =0;
 		
@@ -92,9 +93,25 @@ public class ArrayExample {
 		System.out.println("=========================");
 
 
-		// write a for loop that tells me the last position of null in the array
-
-
+		// 2. write a for loop that tells me the last position of null in the array
+		//by last null position we mean the position with the highest value
+		// way number one
+		
+		int lastNullPosition = -1;
+		
+		for(int pos = 0; pos < stringArray.length; pos++) {
+			if(stringArray[pos] == null) {
+				lastNullPosition = pos;
+			}
+		}
+		
+		if (lastNullPosition == -1) {
+			System.out.println("The array does not have a null");
+		} else {
+			System.out.println("The last null of the array is in position" + lastNullPosition);
+		}
+		// way number 2
+		
 		int lastNull = -1;
 		for (int pos2 = 0; pos2 < stringArray.length; pos2++) {
 			if (stringArray[pos2] == null) {
@@ -103,8 +120,29 @@ public class ArrayExample {
 
 		}
 		System.out.println("Position of the last null is " + lastNull);
+		
+		
+		//Most efficient way because it cab break the loop once it found its answer
+		// starts at the end of the array and counts down to the first
+		
+		int lastNullPositionReverse = -1;
+		
+		for(int pos = stringArray.length -1; pos >= 0; pos--) {
+			if (stringArray[pos] == null) {
+				lastNullPositionReverse = pos;
+				break;
+			}
+		}
+		
+		if (lastNullPositionReverse == -1) {
+			System.out.println ("The array does not have a null");
+		} else {
+			System.out.println ("The last null of the array is in position " + lastNullPositionReverse);
+	}
+			
 
-		// write a for loop that starts at the final position in the array and counts down to the first
+		//3.  write a for loop that starts at the final position in the array and counts down to the first
+		
 		for (int i = stringArray.length - 1; i >= 0; i--) {
 			System.out.println("the value in position " + i + " is " + stringArray[i]);
 
@@ -113,8 +151,9 @@ public class ArrayExample {
 
 		//separating content print statement 
 		System.out.println("=========================");
+		
 
-		// use letters.split(",") to make an array of letters
+		//4. use letters.split(",") to make an array of letters
 		// loop over the array and count the number of letters that are not vowels
 
 		String letters = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z";
