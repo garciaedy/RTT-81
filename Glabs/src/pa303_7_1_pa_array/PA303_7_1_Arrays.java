@@ -1,5 +1,7 @@
 package pa303_7_1_pa_array;
 
+import java.util.Arrays;
+
 public class PA303_7_1_Arrays {
 
 	public static void main(String[] args) {
@@ -37,6 +39,18 @@ public class PA303_7_1_Arrays {
 		 *  “blue,” and “yellow.” Print out the array length. Make a copy using the clone( ) method. Use the Arrays.toString( ) 
 		 *  method on the new array to verify that the original array was copied.
 		*/
+     // Initialize the array with specific colors
+        String[] colors = {"red", "green", "blue", "yellow"};
+
+        //Print out the length of the array
+        System.out.println("Array length: " + colors.length);
+
+        // Make a copy of the array using the clone() method
+        String[] copiedColors = colors.clone();
+
+        // Verify and display the copied array using Arrays.toString() method
+        System.out.println("Copied array: " + Arrays.toString(copiedColors));
+        
 			
 				
 		/*Task 4: Write a program that creates an integer array with 5 elements (i.e., numbers). 
