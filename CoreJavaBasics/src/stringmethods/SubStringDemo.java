@@ -34,8 +34,9 @@ public class SubStringDemo {
 				System.out.println(lastname);
 				
 				
-				// find the position of the first space in the string
+							//1. find the position of the first space in the string
 				String example = "This is an example";
+				
 				int firstPosition = example.indexOf(' ');
 
 		        // Display the result.
@@ -50,11 +51,26 @@ public class SubStringDemo {
 		        }
 		        
 		        
-				// find the position of the last space in the string
-				// substring of the characters between the first and last space of the string
+								// 2. find the position of the last space in the string
+								// substring of the characters between the first and last space of the string
+								
+		
+		        
+		        String example2 = "This is an example";
+		        
+		        // Find the position of the first space in the string
+		        // The indexOf method returns the position of the first occurrence of the specified character
+		        int firstSpacePosition = example2.indexOf(' ');
+
+		        // Display the result
+		        if (firstSpacePosition != -1) {
+		            System.out.println("The position of the first space is: " + firstSpacePosition);
+		        } else {
+		            System.out.println("There is no space in the string.");
+		        }
 				
-				
-				// do the same thing to find the substring of the first and last vowel of the string
+		        
+		        // do the same thing to find the substring of the first and last vowel of the string
 			
 				
 				// use the string.charAt function and use a for loop to loop over the entire string
