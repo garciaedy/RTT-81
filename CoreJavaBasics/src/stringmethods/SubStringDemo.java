@@ -36,7 +36,20 @@ public class SubStringDemo {
 				
 				// find the position of the first space in the string
 				String example = "This is an example";
-				
+				int firstPosition = example.indexOf(' ');
+
+		        // Display the result.
+		        
+		        // Check if the first space position is not -1.
+		        // If it's not -1, then it means a space exists in the string.
+		        if (firstPosition != -1) {
+		            System.out.println("The position of the first space is: " + firstPosition);
+		        } else {
+		            // If the returned position is -1, it means the string does not contain any spaces.
+		            System.out.println("There is no space in the string.");
+		        }
+		        
+		        
 				// find the position of the last space in the string
 				// substring of the characters between the first and last space of the string
 				
