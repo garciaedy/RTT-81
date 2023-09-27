@@ -19,6 +19,18 @@ public class PA303_7_1_Arrays {
 		/* Task 2: Write a program that returns the middle element in an array. 
 		 Give the following values to the integer array: {13, 5, 7, 68, 2} and produce the following output: 7
 		*/
+        //Initialize the array with specific values
+        int[] numbers2 = {13, 5, 7, 68, 2};
+
+        // Calculate the middle index of the array
+        int middleIndex = numbers2.length / 2;
+
+        // Get the middle element using the calculated index
+        int middleValue = numbers2[middleIndex];
+
+        // Display the result
+        System.out.println("The middle element is: " + middleValue);
+    
 				
 				
 		/* Task 3: Write a program that creates an array of String type and initializes it with the strings “red,” “green,”
