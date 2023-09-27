@@ -40,16 +40,16 @@ public class PA303_7_1_Arrays {
 		 *  method on the new array to verify that the original array was copied.
 		*/
      // Initialize the array with specific colors
-        String[] colors = {"red", "green", "blue", "yellow"};
+        String[] colors3 = {"red", "green", "blue", "yellow"};
 
         //Print out the length of the array
-        System.out.println("Array length: " + colors.length);
+        System.out.println("Array length: " + colors3.length);
 
         // Make a copy of the array using the clone() method
-        String[] copiedColors = colors.clone();
+        String[] copiedColors = colors3.clone();
 
         // Verify and display the copied array using Arrays.toString() method
-        System.out.println("Copied array: " + Arrays.toString(copiedColors));
+        System.out.println("clone array: " + Arrays.toString(copiedColors));
         
 			
 				
@@ -58,14 +58,37 @@ public class PA303_7_1_Arrays {
 		 *  Now try printing the value at index = length (e.g., myArray[myArray.length] ).  Notice the type of exception which is produced.
 		 *  Now try to assign a value to the array index 5. You should get the same type of exception.
 		 */
-				
+
+        int[] numbers4 = {1, 2, 3, 4, 5};
+
+        // 2. Print the value at the first index.
+        System.out.println("Value at first index: " + numbers4[0]);
+
+        // 3. Print the value at the last index.
+        System.out.println("Value at last index: " + numbers4[numbers4.length - 1]);
+
+        // 4. This line will cause an exception as it tries to print a non-existent element.
+        System.out.println("Trying to access out of bounds element: " + numbers4[numbers4.length]);
+
+        // 5. This line will also cause an exception as it tries to assign a value to a non-existent index.
+        numbers4[5] = 6;
+    
 				
 		/*Task 5: Write a program where you create an integer array with a length of 5. 
 		 * Loop through the array and assign the value of the loop control variable (e.g., i) 
 		 * to the corresponding index in the array.
 		 */
 				
-				
+        int[] number5 = new int[5];
+
+        // Step 2: Loop through the array.
+        for (int i = 0; i < number5.length; i++) {
+            // Assign the value of the loop control variable (i) to the corresponding index in the array.
+            number5[i] = i;
+
+            // Print the value to see the assignment. (This step is optional, but useful for visual verification.)
+            System.out.println("numbers[" + i + "] = " + number5[i]);
+        }
 				
 		/*Task 6: Write a program where you create an integer array of 5 numbers. 
 		 * Loop through the array and assign the value of the loop control variable multiplied 
