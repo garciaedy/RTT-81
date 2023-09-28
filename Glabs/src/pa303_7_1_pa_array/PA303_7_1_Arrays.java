@@ -104,6 +104,18 @@ public class PA303_7_1_Arrays {
 		/*	Task 8: Write a program that creates a String array of 5 elements 
 		 * and swaps the first element with the middle element without creating a new array.
 		 */
+
+	        String[] strings = { "1", "2", "3", "4", "5" };
+	
+	        System.out.println(Arrays.toString(strings));
+	
+	        String temp = strings[0];
+	        strings[0] = strings[2];
+	        System.out.println(Arrays.toString(strings));
+	
+	        strings[2] = temp;
+	
+	        System.out.println(Arrays.toString(strings));
 				
 		/*	Task 9: Write a program to sort the following int array in ascending order: {4, 2, 9, 13, 1, 0}. 
 		 * Print the array in ascending order, and print the smallest and the largest element of the array. 
@@ -115,24 +127,7 @@ public class PA303_7_1_Arrays {
 		
 		/* 		Task 10: Create an array that includes an integer, 3 strings, and 1 double. Print the array.*/
 				
-		/* Task 11: Write some Java code that asks the user how many favorite things they have.
-		 *  Based on their answer, you should create a String array of the correct size. 
-		 *  Then ask the user to enter the things and store them in the array you created. Finally, print out the contents of the array.
 		
-				Example
-				How many favorite things do you have?
-						7
-		
-						Enter your thing: phone
-						Enter your thing: tv
-						Enter your thing: xbox
-						Enter your thing: wine
-						Enter your thing: beer
-						Enter your thing: sofa
-						Enter your thing: book
-						Your favorite  things are:
-						phone tv xbox wine beer sofa book */
-
 		
 
 	
