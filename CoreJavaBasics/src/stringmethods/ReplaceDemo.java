@@ -1,6 +1,6 @@
 package stringmethods;
 
-public class StringMethods {
+public class ReplaceDemo {
 
 	public static void main(String[] args) {
 		
