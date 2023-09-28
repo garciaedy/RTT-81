@@ -1,10 +1,17 @@
 package conditionalstaments;
+import java.util.Scanner;
+
 
 public class ConditionalStatements {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+			
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter a grade");
+		
+		
+		int n = scanner.nextInt();
+		System.out.println(n);
 	}
 
 }

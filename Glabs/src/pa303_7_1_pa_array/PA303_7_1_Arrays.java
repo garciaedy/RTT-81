@@ -35,8 +35,13 @@ public class PA303_7_1_Arrays {
         // Display the result
         System.out.println("The middle element is: " + middleValue);
     
-				
-				
+				// way numero dos
+		int[] arr = { 13, 5, 7, 68, 2 };
+
+
+		System.out.println(arr[2]);
+		System.out.println(arr[arr.length / 2]);
+
 		/* Task 3: Write a program that creates an array of String type and initializes it with the strings “red,” “green,”
 		 *  “blue,” and “yellow.” Print out the array length. Make a copy using the clone( ) method. Use the Arrays.toString( ) 
 		 *  method on the new array to verify that the original array was copied.
