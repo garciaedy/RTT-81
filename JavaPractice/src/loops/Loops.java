@@ -11,6 +11,13 @@ public class Loops {
 			System.out.println(n);
 
 		}
+		
+		
+		System.out.println("__________Resevers______________");
+		
+		for(int neg =10; neg >0; neg--) {
+			System.out.println(neg);
+		}
 
 		System.out.println("__________New Lline______________");
 
