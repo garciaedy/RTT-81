@@ -39,5 +39,10 @@ public class StringMethods {
 		
 		System.out.println(str1.equals(str2));
 		
+		// Strings regular expressions
+		
+		String str5 = "Water";
+		String str6 = "Water";
+		
 	}
 }
