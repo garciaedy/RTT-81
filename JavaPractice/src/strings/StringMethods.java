@@ -32,5 +32,12 @@ public class StringMethods {
 		String lastName = "Garcia";
 		System.out.println(firstName + lastName);
 		System.out.println(firstName.concat(lastName));
+		
+		
+		String str3 ="Georgia";
+		String str4 ="georgia";
+		
+		System.out.println(str1.equals(str2));
+		
 	}
 }
