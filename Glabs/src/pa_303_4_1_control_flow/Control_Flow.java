@@ -1,5 +1,7 @@
 package pa_303_4_1_control_flow;
 
+import java.util.Scanner;
+
 public class Control_Flow {
 
 	public static void main(String[] args) {
@@ -47,6 +49,14 @@ public class Control_Flow {
 		 *   is between 10 and 20 (including equal to 10 or 20). Change x to 5 and notice the result.*/
 		
 		
+		int x3 = 50;
+		if(x3>=0 && x3 <=20 ) {
+			System.out.println("In range");
+		}else {
+			System.out.println("out of range ");
+		}
+		
+		
 		/*5. Write a program that uses if-else-if statements to print out grades A, B, C, D, F, according to the following criteria:
 		A: 90-100
 		B: 80-89
@@ -55,6 +65,42 @@ public class Control_Flow {
 		F: <60
 		Use the Scanner class to accept a number score from the user to determine the letter grade. 
 		Print out “Score out of range” if the score is less than 0 or greater than 100. */
+		
+		int grade =70;
+		
+		if(grade >= 90) {
+			System.out.println("You have an: A");
+
+		}else if (grade >=80) {
+			System.out.println("You have a: B");
+
+		}else if(grade >=70) {
+			System.out.println("you have a: C");
+		}else if (grade >= 60) {
+			System.out.println("You have an: D");
+
+		}else {
+			System.out.println("You have an: F");
+
+		}
+		
+		//Question 5 again using scanner
+				Scanner input= new Scanner(System.in);
+				System.out.println("Enter your Score:");
+				int score=input.nextInt();
+				
+				if(score>=90 && score<=100)
+					System.out.println("Grade A");
+				else if(score>=80 && score<=89)
+					System.out.println("Grade B");
+				else if(score>=70 && score<=79)
+					System.out.println("Grade C");
+				else if(score>=60 && score<=69)
+					System.out.println("Grade D");
+				else if(score<60)
+					System.out.println("Grade F");
+				else if(score<0 || score>100)
+					System.out.println("Out of scope");
 		
 		
 		/*6. Write a program that accepts an integer between 1 and 7 from the user. Use a switch  statement to print out 
