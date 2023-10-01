@@ -3,7 +3,35 @@ package loops;
 public class Loops {
 
 	public static void main(String[] args) {
-		System.out.println("Hello World");
+
+
+
+		for(int n =0; n<=10; n++) {
+
+			System.out.println(n);
+
+		}
+
+		System.out.println("__________New Lline______________");
+
+
+		for(int i =0; i<=10; i++) {
+			if(i == 6 +1) {
+				break;
+			}
+			System.out.println(i);
+		}
+
+		System.out.println("__________New Lline______________");
+
+		for(int c = 0; c<=15; c++) {
+			if(c == 8) {
+				break;
+			}
+			System.out.println(c);
+		}
+		
+
 	}
 
 }
