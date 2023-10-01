@@ -22,8 +22,10 @@ public class AreaOfCircle {
 
 //        double radius = 5.0; // You can change this value
 //        double area = Math.PI * Math.pow(radius, 2);
-//        System.out.println("Area of the circle: " + area);
 
+
+        
+        
 	}
 
 }

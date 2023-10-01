@@ -12,6 +12,8 @@ public class ConditionalStatements {
 		
 		int n = scanner.nextInt();
 		System.out.println(n);
+		
+		
 	}
 
 }
