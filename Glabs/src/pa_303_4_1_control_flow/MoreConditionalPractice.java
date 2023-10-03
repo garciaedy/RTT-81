@@ -11,7 +11,12 @@ public class MoreConditionalPractice {
 		 *
 		 *   - if age is less than or equal 19, print "You're still a teenager!"
 		 */
-
+			
+		int age = 12;
+		
+		if (age<=19) {
+		 System.out.println("you are still a teenager!!");
+		}
 		
 		
 		/*
@@ -25,7 +30,11 @@ public class MoreConditionalPractice {
 		 *   - otherwise, print "Not a little number!" to the console
 		 */
 		
+		int favoriteNumber = 12;
 		
+		if(favoriteNumber< 10) {
+			System.out.println("A little number!!");
+		}
 
 		/*
 		 * Prompt:
@@ -36,6 +45,8 @@ public class MoreConditionalPractice {
 		 *   result is even"
 		 *   - otherwise, print "After running our calculations, the result is odd"
 		 */
+		
+		
 
 		
 		

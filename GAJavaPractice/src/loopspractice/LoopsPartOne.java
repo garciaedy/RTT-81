@@ -1,6 +1,6 @@
-package loops;
+package loopspractice;
 
-public class LoopsPracrice {
+public class LoopsPartOne {
 
 	public static void main(String[] args) {
 		/*
