@@ -38,7 +38,15 @@ public class Loops {
 			System.out.println(c);
 		}
 		
-
+		System.out.println("__________New Lline______________");
+		
+		for(int num=0, j =1; num<=10; num++, j=j*2) {
+			System.out.println(num+ " "+ j);
+			num++;
+			
+		}
+		
+		
 	}
 
 }
