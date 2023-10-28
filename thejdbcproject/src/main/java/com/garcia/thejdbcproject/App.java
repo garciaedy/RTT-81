@@ -64,31 +64,57 @@ public class App
         
         
         //we must call the GetEmployeebyId method in the main Method
-        getEmployeeById(1504, connection);
+        //gives connection to database, passing an id
+
+       // getEmployeeById(1504, connection);
         
-        
+         insertEmployee(connection);
+        //  updateEmployee(connection);
+//          updateExtension(connection);
+       
         
     }// end of main method
     
     //create a new method we are using public static bc we are in the main app class 
     //where the main method is. The method is static all method
     // creating new method to get employee by id
-    public static void getEmployeeById(int id, Connection conn) throws SQLException {
-    	PreparedStatement ps = conn.prepareStatement(SqlQueries.GetEmployeeById);
-    	ps.setInt(1, id);
-    	ResultSet result= ps.executeQuery();
-    	while(result.next()) {
-    		String firstName = result.getString("firstName");
-    		String email = result.getString("email");
-    		String jobTitle= result.getString("jobTitle");
-    		int reportsTo= result.getInt("reportsTo");
-    		System.out.println(firstName + " | " + email + " | " + jobTitle + " | " + reportsTo);
-    		
-    	}
-    	
-   
-    	
+//    public static void getEmployeeById(int id, Connection conn) throws SQLException {
+//    	PreparedStatement ps = conn.prepareStatement(SqlQueries.GetEmployeeById);
+//    	ps.setInt(1, id);
+//    	ResultSet result= ps.executeQuery();
+//    	while(result.next()) {
+//    		String firstName = result.getString("firstName");
+//    		String email = result.getString("email");
+//    		String jobTitle= result.getString("jobTitle");
+//    		int reportsTo= result.getInt("reportsTo");
+//    		System.out.println(firstName + " | " + email + " | " + jobTitle + " | " + reportsTo);
+//    		
+//    	}
+//    	
+//   
+//    	
+//    }
+    public static void insertEmployee(Connection connection) throws SQLException {
+        String sqlQuery = "INSERT INTO employees (officeCode, firstName, lastName, email, extension, reportsTo, VacationHours, employeeNumber, jobTitle) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        PreparedStatement ps = connection.prepareStatement(sqlQuery);
+
+        // Set the parameters. Each question mark in the SQL statement must have a corresponding setter method call.
+        ps.setInt(1, 6);
+        ps.setString(2, "Edy");
+        ps.setString(3, "Garcia");  // Corrected the lastName
+        ps.setString(4, "hsaha@gmail.com"); // Corrected the email
+        ps.setString(5, "1234"); // Corrected the extension
+        ps.setInt(6, 1143); // Corrected reportsTo
+        ps.setInt(7, 9);  // Corrected VacationHours
+        ps.setInt(8, 1115); // Corrected employeeNumber
+        ps.setString(9, "Developer"); // Corrected jobTitle
+
+        // Execute the update
+        int affectedRows = ps.executeUpdate();
+
+        // Print the number of affected rows
+        System.out.println(affectedRows + " row(s) affected.");
     }
-    
+
     
 }//end of app class
