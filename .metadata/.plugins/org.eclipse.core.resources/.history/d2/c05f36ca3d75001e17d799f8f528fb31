@@ -1,0 +1,70 @@
+package classespartone;
+
+public class Car {
+	
+	private String make = "Toyota";
+	private String model = "Tundra";
+	private String color =" Gray";
+	private int doors = 4;
+	private boolean convertible = true;
+	
+	public String getMake() {
+		return color;
+		
+	}
+	
+	
+	
+	public String getModel() {
+		return model;
+	}
+
+
+
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+
+
+	public int getDoors() {
+		return doors;
+	}
+
+
+
+	public void setDoors(int doors) {
+		this.doors = doors;
+	}
+
+
+
+	public boolean isConvertible() {
+		return convertible;
+	}
+
+
+
+	public void setConvertible(boolean convertible) {
+		this.convertible = convertible;
+	}
+
+
+
+	public void setMake(String make) {
+		this.make = make;
+	}
+		
+	
+
+
+	public void describeCar() {
+		System.out.println(doors +" -Door" 
+	+ color +" " + make + " " + model + " " +(convertible ? "Convertible" :"" ));
+	}
+
+}
+
+
+
+

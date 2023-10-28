@@ -1,0 +1,10 @@
+package com.garcia.departmentproject.controller;
+
+import com.mysql.cj.xdevapi.SessionFactory;
+
+public class DepartementServices {
+
+	public void createDepartmentTable() {
+		SessionFactory factory = new Configuration().configure().buildSessionFactory();
+	}
+}

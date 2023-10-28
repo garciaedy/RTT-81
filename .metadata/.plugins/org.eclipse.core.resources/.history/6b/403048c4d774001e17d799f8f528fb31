@@ -1,0 +1,8 @@
+package com.garcia.departmentproject.controller;
+
+public class DepartementServices {
+
+	public void createDepartmentTable() {
+		SessionFactory factory = new Configuration().configure().buildSessionFactory();
+	}
+}

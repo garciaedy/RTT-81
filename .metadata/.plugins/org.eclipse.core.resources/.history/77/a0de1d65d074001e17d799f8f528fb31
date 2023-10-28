@@ -1,0 +1,14 @@
+package com.garcia.departmentproject.model;
+
+import jakarta.persistence.Entity;
+
+@Entity
+
+public class Department {
+	
+
+	
+	private Integer id;
+	private String name;
+	private state;
+}

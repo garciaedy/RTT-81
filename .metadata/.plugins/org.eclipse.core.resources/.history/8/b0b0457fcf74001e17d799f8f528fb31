@@ -1,0 +1,8 @@
+package com.garcia.departmentproject.model;
+
+@Entity
+public class Department {
+	
+	
+
+}
