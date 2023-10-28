@@ -68,8 +68,8 @@ public class App
 
        // getEmployeeById(1504, connection);
         
-         insertEmployee(connection);
-        //  updateEmployee(connection);
+        // insertEmployee(connection);
+          updateEmployee(connection);
 //          updateExtension(connection);
        
         
@@ -78,22 +78,23 @@ public class App
     //create a new method we are using public static bc we are in the main app class 
     //where the main method is. The method is static all method
     // creating new method to get employee by id
-//    public static void getEmployeeById(int id, Connection conn) throws SQLException {
-//    	PreparedStatement ps = conn.prepareStatement(SqlQueries.GetEmployeeById);
-//    	ps.setInt(1, id);
-//    	ResultSet result= ps.executeQuery();
-//    	while(result.next()) {
-//    		String firstName = result.getString("firstName");
-//    		String email = result.getString("email");
-//    		String jobTitle= result.getString("jobTitle");
-//    		int reportsTo= result.getInt("reportsTo");
-//    		System.out.println(firstName + " | " + email + " | " + jobTitle + " | " + reportsTo);
-//    		
-//    	}
-//    	
-//   
-//    	
-//    }
+    public static void getEmployeeById(int id, Connection conn) throws SQLException {
+    	PreparedStatement ps = conn.prepareStatement(SqlQueries.GetEmployeeById);
+    	ps.setInt(1, id);
+    	ResultSet result= ps.executeQuery();
+    	while(result.next()) {
+    		String firstName = result.getString("firstName");
+    		String email = result.getString("email");
+    		String jobTitle= result.getString("jobTitle");
+    		int reportsTo= result.getInt("reportsTo");
+    		System.out.println(firstName + " | " + email + " | " + jobTitle + " | " + reportsTo);
+    		
+    	}
+    	
+   
+    	
+    }
+    
     public static void insertEmployee(Connection connection) throws SQLException {
         String sqlQuery = "INSERT INTO employees (officeCode, firstName, lastName, email, extension, reportsTo, VacationHours, employeeNumber, jobTitle) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement ps = connection.prepareStatement(sqlQuery);
@@ -115,6 +116,23 @@ public class App
         // Print the number of affected rows
         System.out.println(affectedRows + " row(s) affected.");
     }
+    public static void updateEmployee(Connection connection) throws SQLException{
+    	String selectSql= "UPDATE employees set firstName = ?, lastName=? where employeeNumber=?";
+    		
+    	PreparedStatement stmt = connection.prepareStatement(selectSql);
+    	stmt.setString(1, "Ms." + "Tonya");
+    	stmt.setString(2, "Thomas");
+    	stmt.setInt(3,1114);
+    	stmt.executeUpdate();
+    	 // executeUpdate() returns the number of rows affected
+        int rowsAffected = stmt.executeUpdate();
 
+        // Print the number of affected rows
+        System.out.println("Updated " + rowsAffected + " rows.");
+
+        // It's a good practice to close PreparedStatement to release resources immediately, 
+        // Java try-with-resources can also be used to automatically close it.
+        stmt.close();
+    }
     
 }//end of app class
