@@ -28,6 +28,8 @@ public class App
         String user="root";
         String password="Aaron510";
         
+        //get database and authenticate 
+        
         Connection connection = DriverManager.getConnection(url,user,password);
         
   // we are using the classicmodels db
@@ -46,7 +48,7 @@ public class App
         
         
         //store the column first name for every record, and stores into name
-        while(result.next()) {
+    /*    while(result.next()) {
         	//can use the column name or position(the number
         	String firstName = result.getString("firstName");
         	String lastName = result.getString("lastname");
@@ -54,27 +56,37 @@ public class App
         	int reportsTo= result.getInt("reportsTo");
         	int employeeNumber= result.getInt("employeeNumber");
         	System.out.println(employeeNumber + "| " + firstName + " " + lastName + " | " + email + " | " + reportsTo);
+  
         	
         	
-        	
-        }
+        }    */
 //        connection.close();
+        
+        
+        //we must call the GetEmployeebyId method in the main Method
+        getEmployeeById(1504, connection);
+        
+        
         
     }// end of main method
     
     //create a new method we are using public static bc we are in the main app class 
     //where the main method is. The method is static all method
-   
     // creating new method to get employee by id
-    
-    public static void GetEmployeeById(int id, Connection conn) throws SQLException {
+    public static void getEmployeeById(int id, Connection conn) throws SQLException {
     	PreparedStatement ps = conn.prepareStatement(SqlQueries.GetEmployeeById);
-    	
     	ps.setInt(1, id);
-    	
     	ResultSet result= ps.executeQuery();
+    	while(result.next()) {
+    		String firstName = result.getString("firstName");
+    		String email = result.getString("email");
+    		String jobTitle= result.getString("jobTitle");
+    		int reportsTo= result.getInt("reportsTo");
+    		System.out.println(firstName + " | " + email + " | " + jobTitle + " | " + reportsTo);
+    		
+    	}
     	
-
+   
     	
     }
     
