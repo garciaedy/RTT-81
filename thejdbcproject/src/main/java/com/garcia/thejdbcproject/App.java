@@ -26,10 +26,19 @@ public class App
         //enter username and password you used for sql, to authenticate into
         //the workbench
         String user="root";
-        String password="password";
+        String password="Aaron510";
         
         Connection connection = DriverManager.getConnection(url,user,password);
         
-        //selecting all employeees from employee table
+//selecting all employeees from employee table
+        
+        String selectSql = "Select * from employees";
+        
+        //create statement and import from java.SQL package
+        Statement stmt= connection.createStatement();
+        
+        //when this statement is executed, it query database and return records
+        //from emp table and saving into result variable
+        ResultSet result= stmt.executeQuery(selectSql);
     }
 }
