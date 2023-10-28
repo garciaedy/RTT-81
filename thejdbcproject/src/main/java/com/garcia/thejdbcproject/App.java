@@ -30,7 +30,10 @@ public class App
         
         Connection connection = DriverManager.getConnection(url,user,password);
         
+  // we are using the classicmodels db
+        
 //selecting all employeees from employee table
+     
         
         String selectSql = "Select * from employees";
         
@@ -40,5 +43,17 @@ public class App
         //when this statement is executed, it query database and return records
         //from emp table and saving into result variable
         ResultSet result= stmt.executeQuery(selectSql);
+        
+        while(result.next()) {
+        	String firstName = result.getString("firstName");
+        	String lastName = result.getString("lastname");
+        	String email = result.getString("email");
+        	System.out.println(firstName + " " + lastName + " | " + email);
+        	
+        	
+        	
+        }
+        connection.close();
+        
     }
 }
