@@ -1,0 +1,17 @@
+package com.garcia.departmentproject;
+
+import com.garcia.departmentproject.model.Department;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	Department obj = new Department(null, "Labor", "Georgia");
+    	
+    }
+    
+}
