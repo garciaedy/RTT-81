@@ -43,9 +43,11 @@ public class App
         //when this statement is executed, it query database and return records
         //from emp table and saving into result variable
         ResultSet result= stmt.executeQuery(selectSql);
+        
+        
         //store the column first name for every record, and stores into name
-
         while(result.next()) {
+        	//can use the column name or position(the number
         	String firstName = result.getString("firstName");
         	String lastName = result.getString("lastname");
         	String email = result.getString("email");
@@ -56,7 +58,25 @@ public class App
         	
         	
         }
-        connection.close();
+//        connection.close();
         
+    }// end of main method
+    
+    //create a new method we are using public static bc we are in the main app class 
+    //where the main method is. The method is static all method
+   
+    // creating new method to get employee by id
+    
+    public static void GetEmployeeById(int id, Connection conn) throws SQLException {
+    	PreparedStatement ps = conn.prepareStatement(SqlQueries.GetEmployeeById);
+    	
+    	ps.setInt(1, id);
+    	
+    	ResultSet result= ps.executeQuery();
+    	
+
+    	
     }
-}
+    
+    
+}//end of app class
