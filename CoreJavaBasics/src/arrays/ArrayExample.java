@@ -58,8 +58,8 @@ public class ArrayExample {
 		// write a for loop that tells me how many values are not null
 		// this is using an old style for loop with an array location
 		int notNullCount = 0;
-		for (int pos = 0; pos < stringArray.length; pos++) {
-			if (stringArray[pos] != null) {
+		for (String element : stringArray) {
+			if (element != null) {
 				notNullCount = notNullCount + 1;
 			}
 		}
@@ -113,16 +113,16 @@ public class ArrayExample {
 
 		String[] lettersArray = letters.split(",");
 		int numberOfLetters = 0;
-		for (int pos = 0; pos < lettersArray.length; pos++) {
-			if (lettersArray[pos].equals("a")) {
+		for (String element : lettersArray) {
+			if (element.equals("a")) {
 				continue;
-			} else if (lettersArray[pos].equals("e")) {
+			} else if (element.equals("e")) {
 				continue;
-			} else if (lettersArray[pos].equals("i")) {
+			} else if (element.equals("i")) {
 				continue;
-			} else if (lettersArray[pos].equals("o")) {
+			} else if (element.equals("o")) {
 				continue;
-			} else if (lettersArray[pos].equals("u")) {
+			} else if (element.equals("u")) {
 				continue;
 			}
 

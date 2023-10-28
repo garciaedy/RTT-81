@@ -4,12 +4,12 @@ public  class Rectangle extends Shape {
 
 	private double height;
 	private double width;
-	
+
 	public Rectangle() {
 		super();
 	}
-	
-	// this is the specific formula for the area 
+
+	// this is the specific formula for the area
 	// of a rectangle.  This is implementation of
 	// the Area interface
 	@Override

@@ -6,10 +6,10 @@ public class DayofWeek {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		
+
 		System.out.println("Enter the day numer");
 		int day=scanner.nextInt();
-		
+
 		if(day==1) {
 			System.out.println("The day is Monday ");
 
@@ -34,15 +34,15 @@ public class DayofWeek {
 		}else {
 			System.out.println("The day is does not exist");
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-	
+
+
+
+
+
+
+
+
+
 	}
 
 }

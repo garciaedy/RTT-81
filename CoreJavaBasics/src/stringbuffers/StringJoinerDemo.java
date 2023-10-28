@@ -1,9 +1,6 @@
 package stringbuffers;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.StringJoiner;
-import java.util.stream.Collectors;
 
 public class StringJoinerDemo {
 
@@ -13,7 +10,7 @@ public class StringJoinerDemo {
 	 * by a delimiter and optionally starting with a supplied prefix and ending with
 	 * a supplied suffix. Non Synchronized add() not thread safe String Builder
 	 * Append() Synchronized and thread safe. *
-	 * 
+	 *
 	 */
 
 	public static void main(String[] args) {

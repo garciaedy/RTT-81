@@ -12,15 +12,15 @@ public class StringExamples {
 		// this is a string that has not been allocated in memory yet.
 		String nullstring = null;
 		String ns1 = null;
-		
+
 		if ( nullstring == ns1 ) {
 			// this is true
 		}
-		
+
 		if ( empty.equals(nullstring)) {
 			// this will evaluate to false
 		}
-		
+
 		if ( empty.equals("")) {
 			// this is true
 		}
@@ -46,8 +46,8 @@ public class StringExamples {
 		if (s1.toLowerCase().equals(s2.toLowerCase())) {
 			// this is the same as equalsIgnoreCase
 		}
-		
-		Boolean b = true;
+
+		boolean b = true;
 
 		String upper = s1.toUpperCase();
 		String lower = s1.toLowerCase();
@@ -56,19 +56,19 @@ public class StringExamples {
 		String s = new String("welcome");
 		s = s.replaceAll("e", "E");
 		System.out.println(s);
-		
+
 		String var = "   spaces before and after    ";
 		var = var.trim();
-		
+
 		// what is the difference between 0 and 4 .... 1 and 5  -- the length is the same
 		// string indexes are 0 based
 		String pos = "abcdefghija";
 		//        pos 01234567890
 		int len = pos.length(); // 11
-				
+
 		int first = pos.indexOf('a'); // 0
 		int last = pos.lastIndexOf('a'); // 10
-				
+
 
 	}
 

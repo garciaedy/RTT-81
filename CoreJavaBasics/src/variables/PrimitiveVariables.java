@@ -6,13 +6,13 @@ public class PrimitiveVariables {
 		String x = new String();
 		x.toLowerCase();
 		x.toUpperCase();
-		
-		int j = 4;
-		
-		Integer k = Integer.valueOf(5);
 
-		
+		int j = 4;
+
+		int k = 5;
+
+
 		boolean tuesday = true;
-		Boolean wednesday = new Boolean(false);
+		boolean wednesday = false;
 	}
 }

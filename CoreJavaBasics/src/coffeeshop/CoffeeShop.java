@@ -36,10 +36,10 @@ public class CoffeeShop {
 			sandwich.setName("Egg & Cheese Muffin");
 			sandwich.setPrice(19.99);
 			products.add(sandwich);
-			
+
 			Product water = new Product("Water", 5.99);
 			products.add(1,water);
-			
+
 			//products.remove(0);
 			//products.add(0,water);
 		}
@@ -108,7 +108,7 @@ public class CoffeeShop {
 				}
 			}
 		}
-		
+
 		public List<Product> getProducts() {
 			return products;
 		}
@@ -119,7 +119,7 @@ public class CoffeeShop {
 
 			while (true) {
 				int userSelection = cf.displayMainUserMenu();
-				
+
 				if (userSelection == 1) {
 					cf.printAllProducts();
 				} else if (userSelection == 2) {

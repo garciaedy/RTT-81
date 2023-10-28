@@ -6,9 +6,9 @@ public class Triangle extends Shape {
 	private double side1;
 	private double side2;
 	private double side3;
-	
-	
-	
+
+
+
 	public double getSide1() {
 		return side1;
 	}
@@ -39,7 +39,7 @@ public class Triangle extends Shape {
 	public void setHeight(double height) {
 		this.height = height;
 	}
-	
+
 	@Override
 	public double calculateArea() {
 		return 1/2*base*height;
@@ -47,8 +47,8 @@ public class Triangle extends Shape {
 	@Override
 	public double perimeter() {
 		return side1+side2+side3;
-	} 
-	
-	
+	}
+
+
 
 }

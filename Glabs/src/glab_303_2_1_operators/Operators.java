@@ -3,8 +3,7 @@ package glab_303_2_1_operators;
 public class Operators {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+System.out.println("hello");
 	}
 
 }

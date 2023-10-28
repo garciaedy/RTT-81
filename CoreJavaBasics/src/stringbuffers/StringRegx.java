@@ -1,6 +1,6 @@
 package stringbuffers;
 
-import java.util.regex.*;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class StringRegx {
@@ -49,7 +49,7 @@ public class StringRegx {
 
 		// Creating a Pattern class object
 		Pattern p = Pattern.compile("^\\d{10}$");
-		
+
 
 		// Pattern class contains matcher() method
 		// to find matching between given number

@@ -1,7 +1,6 @@
 package collections;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class IteratorExample {
 
@@ -23,9 +22,7 @@ public class IteratorExample {
 
 		System.out.println("_______==================_______");
 
-		Iterator<String> itr = strings.iterator();
-		while (itr.hasNext()) {
-			String string = itr.next();
+		for (String string : strings) {
 			System.out.println(string);
 		}
 

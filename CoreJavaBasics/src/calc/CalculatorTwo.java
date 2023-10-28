@@ -23,16 +23,16 @@ public class CalculatorTwo {
         switch(math) {
             case "+": result = plus(a, b); break;
             case "-": result = minus(a, b); break;
-            case "/": 
+            case "/":
                 if (b != 0) {
-                    result = divby(a, b); 
+                    result = divby(a, b);
                 } else {
                     System.out.println("Cannot divide by zero.");
                     validOperation = false;
                 }
                 break;
             case "*": result = times(a, b); break;
-            default: 
+            default:
                 System.out.println("You messed up somewhere, try again");
                 validOperation = false;
                 break;

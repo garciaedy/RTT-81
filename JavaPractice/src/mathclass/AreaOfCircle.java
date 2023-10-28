@@ -5,7 +5,7 @@ public class AreaOfCircle {
 
 	public static void main(String[] args) {
 		//Given a radius r, compute the area of a circle. Use Math.PI for the value of π.
-		// This program calculates the area of a circle using the formula Area = 2 Area=πr 2 . 
+		// This program calculates the area of a circle using the formula Area = 2 Area=πr 2 .
 		//It uses Math.PI to get the value of π.
 
 
@@ -15,7 +15,7 @@ public class AreaOfCircle {
 
 		System.out.println("Enter the radius: ");
 		double radius = scanner.nextDouble();
-		
+
         double area = Math.PI * Math.pow(radius, 2);
 
         System.out.println("Area of the circle: " + area);
@@ -24,8 +24,8 @@ public class AreaOfCircle {
 //        double area = Math.PI * Math.pow(radius, 2);
 
 
-        
-        
+
+
 	}
 
 }

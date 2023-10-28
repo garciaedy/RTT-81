@@ -10,7 +10,7 @@ public class NestedLoop {
 			}
 			System.out.print("\n");
 		}
-		
+
 	}
 
 }

@@ -6,17 +6,17 @@ public class Calculator {
 
 	public static void main(String[] args) {
 	/* Create a small calculator .. it will be able to do 4 operations - add, subtract, multiply and divide.
-	 *   Each of these will be a single method that does that operation.    Ask the user for 2 numbers 
-	 *   and then ask the user which operation they want to do.   Then do that operation and print the result.   
-	 *   Each operation should not print its own results.   All operations should work with double values. (edited) 
+	 *   Each of these will be a single method that does that operation.    Ask the user for 2 numbers
+	 *   and then ask the user which operation they want to do.   Then do that operation and print the result.
+	 *   Each operation should not print its own results.   All operations should work with double values. (edited)
 	So this should be a main function with probably 6 methods ( 4 operations, 1 menu, 1 input )
 	each operation should take 2 parameters and return a double ...*/
 Scanner scanner = new Scanner(System.in);
-        
+
         // Ask user for two numbers
         System.out.println("Enter the first number:");
         double num1 = inputDouble(scanner);
-        
+
         System.out.println("Enter the second number:");
         double num2 = inputDouble(scanner);
 
@@ -24,7 +24,7 @@ Scanner scanner = new Scanner(System.in);
         displayMenu();
         int choice = scanner.nextInt();
 
-    
+
         calculationChoice(choice, num1, num2);
     }
 
@@ -56,7 +56,7 @@ Scanner scanner = new Scanner(System.in);
         System.out.println("4. Divide");
         System.out.println("Enter your choice (1/2/3/4):");
     }
-    
+
     private static double inputDouble(Scanner scanner) {
         while (!scanner.hasNextDouble()) {
             System.out.println("Please enter a valid number:");
