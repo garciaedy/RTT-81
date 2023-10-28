@@ -43,12 +43,15 @@ public class App
         //when this statement is executed, it query database and return records
         //from emp table and saving into result variable
         ResultSet result= stmt.executeQuery(selectSql);
-        
+        //store the column first name for every record, and stores into name
+
         while(result.next()) {
         	String firstName = result.getString("firstName");
         	String lastName = result.getString("lastname");
         	String email = result.getString("email");
-        	System.out.println(firstName + " " + lastName + " | " + email);
+        	int reportsTo= result.getInt("reportsTo");
+        	int employeeNumber= result.getInt("employeeNumber");
+        	System.out.println(employeeNumber + "| " + firstName + " " + lastName + " | " + email + " | " + reportsTo);
         	
         	
         	
