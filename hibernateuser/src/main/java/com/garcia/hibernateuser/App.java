@@ -23,7 +23,9 @@ public class App
     	 //This will read the createUserTable method step by step 
     	 
 //    	obj.createUserTable();
-    	 obj.createUser();
+//    	 obj.createUser();
+//    	 obj.findUser(11);
+    	 obj.updateUser(3);
     	
     	
     	//obj.useFromClause();

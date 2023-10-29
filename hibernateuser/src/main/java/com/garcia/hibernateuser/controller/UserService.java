@@ -99,4 +99,26 @@ public class UserService {
 		factory.close();
 		session.close();
 	}
+	
+	public void updateUser(int id){
+		SessionFactory factory = new Configuration().configure().buildSessionFactory();
+		Session session =factory.openSession();
+		Transaction t = session.beginTransaction();
+		
+		User u =new User();
+		u.setId(id);
+		u.setFullName("homee Lopiee");
+		u.setEmail("onLop@gmail.com");
+		u.setPassword("Bahahaha");
+		u.setCity("Norcross");
+		u.setAge(32);
+		u.setSalary(80000);
+		
+		
+		session.merge(u);
+		session.getTransaction().commit();
+		session.close();
+		factory.close();
+	}
+	
 }
