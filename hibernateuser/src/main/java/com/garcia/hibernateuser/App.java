@@ -1,5 +1,6 @@
 package com.garcia.hibernateuser;
 
+import com.garcia.hibernateuser.controller.UserService;
 import com.garcia.hibernateuser.model.User;
 
 /**
@@ -16,6 +17,8 @@ public class App
     	
     	//create an object UserSerice that invoke the createTable method from the UserService.java
     	
+    	UserService obj = new UserService();
+    	obj.createUserTable();
     	
     	
     }
