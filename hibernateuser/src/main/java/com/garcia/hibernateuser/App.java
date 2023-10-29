@@ -1,7 +1,7 @@
 package com.garcia.hibernateuser;
 
 import com.garcia.hibernateuser.controller.UserService;
-import com.garcia.hibernateuser.model.User;
+//import com.garcia.hibernateuser.model.User;
 
 /**
  * Hello world!
@@ -15,9 +15,10 @@ public class App
 //    User obj = new User("Garcia", "Garcia@gmail.com", "Password", 22, 100000.00,"Atlanta");
 //    	System.out.println(obj.toString());
     	
-    	//create an object UserSerice that invoke the createTable method from the UserService.java
-    	
-    	UserService obj = new UserService();
+    	//create an object UserSerice 
+    	 UserService obj = new UserService();
+    	//...that invoke the createUserTable method from the UserService.java
+    	 //This will read the createUserTable method step by step 
     	obj.createUserTable();
     	
     	

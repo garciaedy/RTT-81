@@ -64,10 +64,10 @@ public class User {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getFullName() {
+	public String getFullname() {
 		return fullName;
 	}
-	public void setFullName(String fullName) {
+	public void setFullname(String fullName) {
 		this.fullName = fullName;
 	}
 	public String getEmail() {
@@ -107,6 +107,7 @@ public class User {
 		return "User [id=" + id + ", fullName=" + fullName + ", email=" + email + ", password=" + password + ", age="
 				+ age + ", salary=" + salary + ", city=" + city + "]";
 	}
+
 
 
 	
