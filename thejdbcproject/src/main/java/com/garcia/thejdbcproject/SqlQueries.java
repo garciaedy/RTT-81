@@ -1,4 +1,4 @@
-package com.garcia.thejdbcproject;
+package src.main.java.com.garcia.thejdbcproject;
 
 public class SqlQueries {
 	public final static String GetEmployeeById= "Select * from employees where  employeeNumber=?";

@@ -10,15 +10,15 @@ import java.sql.Statement;
  * Hello world!
  *
  */
-public class App 
+public class App
 {
 	public static void main( String[] args ) throws ClassNotFoundException, SQLException
 	{
-		//optional, legacy code 
-		//will find class inside maven dependency 
+		//optional, legacy code
+		//will find class inside maven dependency
 		//will connect us to the database, and it gets the driver which
-		//allows us to do that, 
-		Class.forName("com.mysql.cj.jdbc.Driver"); 
+		//allows us to do that,
+		Class.forName("com.mysql.cj.jdbc.Driver");
 
 		//create string url
 		String url= "jdbc:mysql://localhost:3306/classicmodels";
@@ -28,7 +28,7 @@ public class App
 		String user="root";
 		String password="Aaron510";
 
-		//get database and authenticate 
+		//get database and authenticate
 
 		Connection connection = DriverManager.getConnection(url,user,password);
 
@@ -75,7 +75,7 @@ public class App
 
 	}// end of main method
 
-	//create a new method we are using public static bc we are in the main app class 
+	//create a new method we are using public static bc we are in the main app class
 	//where the main method is. The method is static all method
 	// creating new method to get employee by id
 	public static void getEmployeeById(int id, Connection conn) throws SQLException {
@@ -130,7 +130,7 @@ public class App
 		// Print the number of affected rows
 		System.out.println("Updated " + rowsAffected + " rows.");
 
-		// It's a good practice to close PreparedStatement to release resources immediately, 
+		// It's a good practice to close PreparedStatement to release resources immediately,
 		// Java try-with-resources can also be used to automatically close it.
 		stmt.close();
 	}
