@@ -1,0 +1,16 @@
+package com.garcia.bookdaojdbc.model;
+
+public class Book {
+
+	private int id;
+	private int isbn;
+	private String bookName;
+	
+	//p
+	public Book(int id, int isbn, String bookName) {
+		super();
+		this.id = id;
+		this.isbn = isbn;
+		this.bookName = bookName;
+	}
+}
