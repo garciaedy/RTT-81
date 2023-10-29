@@ -25,7 +25,7 @@ public class ConnectionDao {
 		public static Connection getConnection() {
 			final String dburl="jdbc:mysql://localhost:3306/books";
 			final String dbuser="root";
-			final String dbpassword= "password";
+			final String dbpassword= "Aaron510";
 			
 			try {
 				con= DriverManager.getConnection(dburl,dbuser,dbpassword);
@@ -39,6 +39,27 @@ public class ConnectionDao {
 				return con;
 			}
 		
+		public void disconnect()
+		   {
+		      try {
+		         if(rs != null)
+		         {
+		            rs.close();
+		         }
+		         if(ps != null)
+		         {
+		            ps.close();
+		         }
+		         if(con != null)
+		         {
+		            con.close();
+		         }
+		        
+		      }catch (Exception e) {
+		        
+		      
+			}
+			
+		}
+		
 	}
-
-
