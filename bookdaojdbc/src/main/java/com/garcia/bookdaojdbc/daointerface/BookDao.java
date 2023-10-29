@@ -10,7 +10,7 @@ public interface BookDao {
 
 	List<Book> getAllBooks();
 
-	void saveBook(List<Book> booList);
+	void saveBook(List<Book> bookList);
 
 	boolean deleteBook(int id);
 
