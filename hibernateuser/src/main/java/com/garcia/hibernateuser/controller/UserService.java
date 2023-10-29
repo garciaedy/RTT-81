@@ -32,45 +32,71 @@ public class UserService {
 	}
 	public void createUser() {
 		SessionFactory factory = new Configuration().configure().buildSessionFactory();
-		Session session = factory.openSession();
+		Session session =factory.openSession();
 		Transaction t = session.beginTransaction();
 		
-		User uone = new User();
-		uone.setEmail("hasseb@gmail.com");
-		uone.setFullname("Moh Haseeb");
-		uone.setPassword ("has123");
-		uone.setSalary (2000.99);
-		uone.setAge (20);
-		uone.setCity ("NYC");
+		User uOne = new User();
+		uOne.setEmail("hassebe@gmail.com");
+		uOne.setFullName("Moh Haseeb");
+		uOne.setPassword("has123");
+		uOne.setSalary(2000.99);
+		uOne.setAge(20);
+		uOne.setCity("NYC");
 		
 		User uTwo = new User();
-		uTwo. setEmail("James@gmail.com");
-		uTwo. setFullname ("James Santana"); 
-		uTwo.setPassword ("James123"); 
-		uTwo.setSalary (2060.69);
+		
+		uTwo.setEmail("james@gmail.com");
+		uTwo.setFullName("james Santana");
+		uTwo.setPassword("james123");
+		uTwo.setSalary(2060.69);
 		uTwo.setAge(25);
-		uTwo. setCity ("Dallas");
+		uTwo.setCity("Dallas");
 		
 		User uThree = new User();
-		uThree.setEmail ("Shahparan@gmail.com");
-		uThree.setFullname ("AH Shahparan");
-		uThree.setPassword ("Shahparan123"); uThree. setSalary (3060.69);
-		uThree.setAge (30);
-		uThree.setCity ("Chicago");
+		uThree.setEmail("Shahparan@gmail.com");
+		uThree.setFullName("AH Shahparan");
+		uThree.setPassword("Shahparan123");
+		uThree.setSalary(3060.69);
+		uThree.setAge(30);
+		uThree.setCity("Chicago");
 		
-		User ufour = new User("Christ", "christ@gmail.com", "12345",35, 35000.00, "Atlanta");
-		User ufive = new User("Sid", "sid@gmail.com", "4567", 25,4000.00, "Louisville");
-	
-		session.persist (uone); 
-		session. persist (uTwo); 
-		session. persist (uThree);
-		session. persist (ufour); 
-		session. persist (ufive);
+		User uEight = new User();
+		uEight.setEmail("HellowWorlf.com");
+		uEight.setFullName("Hello World");
+		uEight.setPassword("HelloW");
+		uEight.setSalary(30160.69);
+		uEight.setAge(22);
+		uEight.setCity("Bama");
+		
+		User uFour = new User("Christ","christ@gmail.com","12345",35,3500.00,"Atlanta");
+		User uFive = new User("Sid", "sid@gmail.com","4567",25,4000.00,"Louisville");
+		User uSix = new User("Edy", "edy@gmail.com","12567",33,40000.00,"ATL");
+		session.persist(uOne);
+		session.persist(uTwo);
+		session.persist(uThree);
+		session.persist(uFour);
+		session.persist(uFive);
+		session.persist(uSix);
+		session.persist(uEight);
 		
 		t.commit();
 		
-		System.out.println("Successfully Saved"); 
-		factory.close(); 
-		session. close();
+		System.out.println("Sucessfully Saved");
+		factory.close();
+		session.close();
+	}
+	
+	public void findUser(int id) {
+		SessionFactory factory = new Configuration().configure().buildSessionFactory();
+		Session session =factory.openSession();
+		Transaction t = session.beginTransaction();
+		
+		User u = session.get(User.class, id);
+		System.out.println("Fullname" + u.getFullName());
+		System.out.println("Email" + u.getEmail());
+		System.out.println("Password" + u.getPassword());
+		t.commit();
+		factory.close();
+		session.close();
 	}
 }

@@ -15,11 +15,36 @@ public class App
 //    User obj = new User("Garcia", "Garcia@gmail.com", "Password", 22, 100000.00,"Atlanta");
 //    	System.out.println(obj.toString());
     	
+    	
+     
     	//create an object UserSerice 
     	 UserService obj = new UserService();
     	//...that invoke the createUserTable method from the UserService.java
     	 //This will read the createUserTable method step by step 
-    	obj.createUserTable();
+    	 
+//    	obj.createUserTable();
+    	 obj.createUser();
+    	
+    	
+    	//obj.useFromClause();
+    	//obj.useOrderByClause();
+    	//obj.useMultiSelectExpressionClause();
+    	//obj.useGroupByClause();
+    	//obj.useNameParameters();
+      
+    	
+    	
+    	
+    	//hqlObj.useFromClause();
+    	
+    	//hqlObj.useWhereClause();
+    	
+    	// hqlObj.useOrderByClause();
+    	
+//    	hqlObj.useMultiSelectExClause();
+    	
+    	//hqlObj.useGroupByClause();
+    	//hqlObj.useNameParameters();
     	
     	
     }
