@@ -1,8 +1,0 @@
-package com.garcia.bookdaojdbc.model;
-
-public class Book {
-
-	private int;
-	private int isbn;
-	private String book
-}
