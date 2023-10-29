@@ -12,7 +12,7 @@ public class App
     {
 
     User obj = new User("Garcia", "Garcia@gmail.com", "Password", 22, 100000.00,"Atlanta");
-  
+    	System.out.println(obj.toString());
     }
     
 }
