@@ -26,7 +26,7 @@ public class App
 //    	 obj.createUser();
 //    	 obj.findUser(11);
 //    	 obj.updateUser(3);
-    	 obj.deleteUser(13);
+//    	 obj.deleteUser(13);
     	
     	
     	//obj.useFromClause();
