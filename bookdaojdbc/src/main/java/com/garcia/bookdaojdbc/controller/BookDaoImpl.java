@@ -68,14 +68,13 @@ public class BookDaoImpl extends ConnectionDao implements BookDao{
 
 				//sets bookName
 				ps.setString(3,b.getBookName());
-
 				//updates the table,with new records
 				int affectedRows= ps.executeUpdate();
-
 				//display num of rows affected
 				System.out.println(affectedRows+ "row(s) affected");
 
 			}
+			//we can also call it throwables instead of e
 		}catch(SQLException e) {
 			e.printStackTrace();
 		}
@@ -84,15 +83,50 @@ public class BookDaoImpl extends ConnectionDao implements BookDao{
 
 	@Override
 	public boolean deleteBook(int id) {
-		// TODO Auto-generated method stub
+		try {
+			Connection connection= ConnectionDao.getConnection();
+			PreparedStatement ps= connection.prepareStatement("DELETE FROM books WHERE id=?");
+			ps.setInt(1, id);
+			//update the table
+			int i= ps.executeUpdate();
+			if(i==1) {
+				return true; 
+			}
+
+		}catch(SQLException e) {
+			//%s is place holder for the first message, second message in order
+			//formats error message
+			System.err.format("SQL State: %s\n%s", e.getSQLState(),e.getMessage());
+		}
 		return false;
 	}
 
 	@Override
 	public boolean updateBook(Book book, int id) {
-		// TODO Auto-generated method stub
+
+		try {
+			Connection connection= ConnectionDao.getConnection();
+			//position 1 is the position of the first "?" which here is isbn
+			PreparedStatement ps= connection.prepareStatement("UPDATE books SET isbn=?, bookName=? WHERE id=?");
+
+			ps.setInt(1,book.getIsbn());
+			ps.setString(2,book.getBookName());
+			//updating the id using the one passed in parameter
+			ps.setInt(3, id);
+
+			//executeUpdate returns how many rows are affected
+			int i=ps.executeUpdate();
+			//if  one row is affected it return true, if no row is affected when executeupdate is ran, then returns false
+			if(i==1) {
+				return true;
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+
 		return false;
 	}
+
 
 
 }

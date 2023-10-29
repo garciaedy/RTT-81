@@ -7,6 +7,7 @@ public class Book {
 	private int id;
 	private int isbn;
 	private String bookName;
+	
 	//contructor  allow us to build different object from the class
 	public Book() {
 		this.isbn = 0;
@@ -17,6 +18,14 @@ public class Book {
 	public Book(int isbn, String bookName) {
 		super();
 		
+		this.isbn = isbn;
+		this.bookName = bookName;
+		
+	}
+	
+	public Book(int id, int isbn, String bookName) {
+		super();
+		this.id =id;
 		this.isbn = isbn;
 		this.bookName = bookName;
 		
