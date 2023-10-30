@@ -19,6 +19,7 @@
         <property name="hibernate.show_sql" >true </property>
         <property name="hibernate.format_sql" >true </property>
         <!--   Mapping entity file.. we get thsi from the com.garcia.hibernateuser.model package -->
-        <mapping class="com.garcia.hibernateuser.model.User"/>
+        <mapping class="com.garcia.theschool.model.Teacher"/>
+         <mapping class="com.garcia.theschool.model.Department"/>
     </session-factory>
 </hibernate-configuration>
