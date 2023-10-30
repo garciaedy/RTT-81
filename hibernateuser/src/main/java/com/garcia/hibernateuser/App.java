@@ -1,5 +1,6 @@
 package com.garcia.hibernateuser;
 
+import com.garcia.hibernateuser.controller.HibernateQueryLang;
 import com.garcia.hibernateuser.controller.UserService;
 //import com.garcia.hibernateuser.model.User;
 
@@ -18,7 +19,7 @@ public class App
     	
      
     	//create an object UserSerice 
-    	 UserService obj = new UserService();
+//    	 UserService obj = new UserService();
     	//...that invoke the createUserTable method from the UserService.java
     	 //This will read the createUserTable method step by step 
     	 
@@ -28,8 +29,9 @@ public class App
 //    	 obj.updateUser(3);
 //    	 obj.deleteUser(13);
     	
+    	HibernateQueryLang obj = new HibernateQueryLang();
     	
-    	//obj.useFromClause();
+    	obj.useFromClause();
     	//obj.useOrderByClause();
     	//obj.useMultiSelectExpressionClause();
     	//obj.useGroupByClause();
