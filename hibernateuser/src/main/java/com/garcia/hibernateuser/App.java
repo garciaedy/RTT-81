@@ -30,12 +30,12 @@ public class App
 //    	 obj.deleteUser(13);
     	
     	HibernateQueryLang obj = new HibernateQueryLang();
-    	
-    	obj.useFromClause();
-    	//obj.useOrderByClause();
-    	//obj.useMultiSelectExpressionClause();
-    	//obj.useGroupByClause();
-    	//obj.useNameParameters();
+//    	
+//    	obj.useFromClause();
+//    	obj.useOrderByClause();
+//    	obj.useMultiSelectExpressionClause();
+//    	obj.useGroupByClause();
+    	obj.useNameParameters();
       
     	
     	
