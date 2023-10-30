@@ -62,11 +62,14 @@ public class Teacher  implements Serializable{
 	public void setTeachername(String teachername) {
 		this.teachername = teachername;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Teacher [teacherId=" + teacherId + ", salary=" + salary + ", teachername=" + teachername + "]";
+		return "Teacher [teacherId=" + teacherId + ", salary=" + salary + ", teachername=" + teachername
+				+ ", department=" + department + "]";
 	}
+	
+	
 	
 	
 	
