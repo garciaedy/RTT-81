@@ -1,13 +1,17 @@
 package com.garcia.theschool;
 
+import com.garcia.theschool.util.GenerateDataUtil;
+
 /**
  * Hello world!
  *
  */
-public class App 
+public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+    	GenerateDataUtil obj = new GenerateDataUtil();
+    	obj.CreateDataManyToOne();
+    
     }
 }

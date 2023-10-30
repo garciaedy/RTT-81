@@ -3,24 +3,23 @@ package com.garcia.theschool.model;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
-
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 
 @Entity
 @Table
 public class Department implements Serializable {
-	
+
 	private static final long serialVersionUID =1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int deptId;
 	private String deptName;
-	
+
 	public Department() {}
-		
+
 	public Department(int deptId, String deptName) {
 		super();
 		this.deptId = deptId;
@@ -47,8 +46,8 @@ public class Department implements Serializable {
 	public String toString() {
 		return "Department [deptId=" + deptId + ", deptName=" + deptName + "]";
 	}
-	
-	
-	
-	
+
+
+
+
 }

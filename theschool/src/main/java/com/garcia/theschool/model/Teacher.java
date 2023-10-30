@@ -3,13 +3,12 @@ package com.garcia.theschool.model;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 
 @Entity
 @Table
@@ -21,21 +20,21 @@ public class Teacher  implements Serializable{
 	private int teacherId;
 	private String salary;
 	private String teachername;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "fk_deptid")
 	private Department department;
-	
-	
+
+
 	public Teacher() {}
-	
+
 	public Teacher(String salary, String teachername) {
 		super();
 		this.salary = salary;
 		this.teachername = teachername;
 	}
-	
-	
+
+
 	public Department getDepartment() {
 		return department;
 	}
@@ -68,9 +67,9 @@ public class Teacher  implements Serializable{
 		return "Teacher [teacherId=" + teacherId + ", salary=" + salary + ", teachername=" + teachername
 				+ ", department=" + department + "]";
 	}
-	
-	
-	
-	
-	
+
+
+
+
+
 }
