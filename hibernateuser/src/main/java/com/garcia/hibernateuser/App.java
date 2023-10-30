@@ -3,6 +3,7 @@ package com.garcia.hibernateuser;
 import com.garcia.hibernateuser.controller.HibernateQueryLang;
 import com.garcia.hibernateuser.controller.UserService;
 //import com.garcia.hibernateuser.model.User;
+import com.garcia.hibernateuser.model.User;
 
 /**
  * Hello world!
@@ -29,15 +30,16 @@ public class App
 //    	 obj.updateUser(3);
 //    	 obj.deleteUser(13);
     	
-    	HibernateQueryLang obj = new HibernateQueryLang();
+//    	HibernateQueryLang obj = new HibernateQueryLang();
 //    	
 //    	obj.useFromClause();
 //    	obj.useOrderByClause();
 //    	obj.useMultiSelectExpressionClause();
 //    	obj.useGroupByClause();
-    	obj.useNameParameters();
-      
-    	
+//    	obj.useNameParameters();
+	      User obj = new User();
+	      obj.updateUser();
+	        
     	
     	
     	//hqlObj.useFromClause();

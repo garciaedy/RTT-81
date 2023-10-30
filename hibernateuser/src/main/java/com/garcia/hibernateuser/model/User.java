@@ -8,9 +8,23 @@ package com.garcia.hibernateuser.model;
 //import jakarta.persistence.Table;
 import javax.persistence.*;
 
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.garcia.hibernateuser.util.HibernateUtil;
+
+
+
 //THIS IS A POJO/MODEL CLASS, NEEDS COSNTRUCTOR
 //import from jakarta
 //all annotations above a field refer to that field
+
+@NamedQueries({
+	@NamedQuery(name = "updateMyUser", query = "UPDATE User SET fullName = :fullname WHERE id = :id")
+	
+})
+
+
 
 //add table 
 @Entity
@@ -51,6 +65,22 @@ public class User {
         this.city = city;
     }
 
+	public void updateUser() {
+		Session session = HibernateUtil.getConnection();
+		Transaction t = session.beginTransaction();
+		TypedQuery<?> query = session.getNamedQuery("updateMyUser");
+		query.setParameter("fullname", "LaTonya Lewis");
+		query.setParameter("id", 2);
+		int rowsAffected = query.executeUpdate();
+		System.out.println(rowsAffected + " rows were affected");
+		
+		t.commit();
+		System.out.println("Successfully Updated User");
+		
+		
+		
+	}
+	
     // ... Getters and Setters ...
 
     public Integer getId() {
