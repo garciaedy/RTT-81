@@ -14,7 +14,7 @@ public class App
 //    	obj.CreateDataManyToOne();
     	
 	GenerateDataUtil obj = new GenerateDataUtil();
-//	GenerateDataUtil.createDataOneToMany();
+     GenerateDataUtil.createDataOneToMany();
 	
     
     }
