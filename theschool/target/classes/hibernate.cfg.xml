@@ -21,5 +21,9 @@
         <!--   Mapping entity file.. we get thsi from the com.garcia.hibernateuser.model package -->
         <mapping class="com.garcia.theschool.model.Teacher"/>
          <mapping class="com.garcia.theschool.model.Department"/>
+         <mapping class="com.garcia.theschool.model.Teacher1M"/>
+         <mapping class="com.garcia.theschool.model.Department1M"/>
+           <mapping class="com.garcia.theschool.model.Address"/>
+         <mapping class="com.garcia.theschool.model.Person"/>
     </session-factory>
 </hibernate-configuration>
