@@ -25,5 +25,7 @@
          <mapping class="com.garcia.theschool.model.Department1M"/>
            <mapping class="com.garcia.theschool.model.Address"/>
          <mapping class="com.garcia.theschool.model.Person"/>
+         <mapping class="com.garcia.theschool.model.Cohort"/>
+        <mapping class="com.garcia.theschool.model.TeacherMM"/>
     </session-factory>
 </hibernate-configuration>

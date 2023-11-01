@@ -15,7 +15,7 @@ public class App
     	
 	GenerateDataUtil obj = new GenerateDataUtil();
 //     GenerateDataUtil.createDataOneToMany();
-   GenerateDataUtil.createDataOneToOne();
-    
+//   GenerateDataUtil.createDataOneToOne();
+	 GenerateDataUtil.createDataManyToMany();
     }
 }
