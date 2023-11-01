@@ -13,26 +13,24 @@ import javax.persistence.Table;
 
 @Entity
 @Table
+public class Department1M implements Serializable{
 
-public class Department1M implements Serializable {
-	
-	private static final long serialVersionUID = 1l;
+	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int deptId;
 	private String deptName;
 	
-	@OneToMany (targetEntity = Teacher1M.class, cascade = (CascadeType.ALL))
-	private List teacherlist;
+	@OneToMany(targetEntity = Teacher1M.class, cascade =(CascadeType.ALL))
+	private List teacherList;
 	
 	public Department1M() {}
 
-	public Department1M(int deptId, String deptName, List teacherlist) {
+	public Department1M(int deptId, String deptName) {
 		super();
 		this.deptId = deptId;
 		this.deptName = deptName;
-		this.teacherlist = teacherlist;
 	}
 
 	public int getDeptId() {
@@ -51,19 +49,20 @@ public class Department1M implements Serializable {
 		this.deptName = deptName;
 	}
 
-	public List getTeacherlist() {
-		return teacherlist;
+	public List getTeacherList() {
+		return teacherList;
 	}
 
-	public void setTeacherlist(List teacherlist) {
-		this.teacherlist = teacherlist;
+	public void setTeacherList(List teacherList) {
+		this.teacherList = teacherList;
 	}
 
 	@Override
 	public String toString() {
-		return "Department1M [deptId=" + deptId + ", deptName=" + deptName + ", teacherlist=" + teacherlist + "]";
+		return "Department1M [deptId=" + deptId + ", deptName=" + deptName + ", teacherList=" + teacherList + "]";
 	}
+	
+	
 	
 
-	}
-	
+}

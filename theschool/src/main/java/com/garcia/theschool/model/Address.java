@@ -3,17 +3,19 @@ package com.garcia.theschool.model;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
-
 
 @Entity
 @Table
-public class Address implements Serializable {
-	
-	private static final long serialVersionUID = 1l;
+public class Address implements Serializable{
+
+	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GenratedValue = 
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int addressId;
 	private String street;
 	private String city;
@@ -75,7 +77,6 @@ public class Address implements Serializable {
 		return "Address [addressId=" + addressId + ", street=" + street + ", city=" + city + ", state=" + state
 				+ ", zipcode=" + zipcode + "]";
 	}
-
 	
 	
 
