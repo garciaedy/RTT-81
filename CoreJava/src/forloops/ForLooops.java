@@ -45,7 +45,18 @@ public class ForLooops {
 		System.out.println("_________________________________");
 		System.out.println(" ");
 		
+		int[] numbers1 = {1, 3, 5, 7, 9};
+		int sum1 = 0;
+		for (int num1 : numbers1) {
+		    sum1 += num1;
+		}
+		System.out.println("Sum: " + sum1); // Output: Sum: 25
 		
+//		for (int i = 0; i < numbers1.length; i++) {
+//		    sum1 += numbers1[i];
+//		}
+//
+//		System.out.println("Sum: " + sum1); // Output: Sum: 25
 		
 		
 		System.out.println(" ");
