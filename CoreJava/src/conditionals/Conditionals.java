@@ -32,7 +32,13 @@ public class Conditionals {
 
 		}else {
 			System.out.println("The number is odd");
+			
 		}
+		
+		System.out.println(" ");
+		System.out.println("_________________________________");
+		System.out.println(" ");
+		
 		// Determine the type of a website based on protocol and domain.
 
 		String protocol = "https";
@@ -46,6 +52,58 @@ public class Conditionals {
 		}else {
 			System.out.println("Not a secure website");
 		}
+		
+		System.out.println(" ");
+		System.out.println("_________________________________");
+		System.out.println(" ");
+		// Command-based action determination.
+
+		String command = "Start";
+		switch(command) {
+		case "Start":
+		System.out.println("Starting the engine...");
+		break;
+		case"stop":
+			System.out.println("Stopping the engine");
+			break;
+			default:
+				System.out.println("Command not recognized");
+			
+		}
+		
+		
+		
+		System.out.println(" ");
+		System.out.println("_________________________________");
+		System.out.println(" ");
+		
+		
+		
+		
+		
+		System.out.println(" ");
+		System.out.println("_________________________________");
+		System.out.println(" ");
+		
+		
+		
+		
+		System.out.println(" ");
+		System.out.println("_________________________________");
+		System.out.println(" ");
+		
+		
+		
+		
+		System.out.println(" ");
+		System.out.println("_________________________________");
+		System.out.println(" ");
+		
+		
+		
+		System.out.println(" ");
+		System.out.println("_________________________________");
+		System.out.println(" ");
 		
 	}
 
