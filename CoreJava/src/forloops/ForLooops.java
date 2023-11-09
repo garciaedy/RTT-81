@@ -1,5 +1,8 @@
 package forloops;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class ForLooops {
 	public static void main(String[] args) {
 		
@@ -63,26 +66,13 @@ public class ForLooops {
 		System.out.println("_________________________________");
 		System.out.println(" ");
 		
-		System.out.println(" ");
-		System.out.println("_________________________________");
-		System.out.println(" ");
+		List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+		for (String name : names) {
+		    System.out.println("Hello, " + name + "!"); // Output: Hello, Alice! Hello, Bob! Hello, Charlie!
+		}
 		
-		System.out.println(" ");
-		System.out.println("_________________________________");
-		System.out.println(" ");
-		
-		System.out.println(" ");
-		System.out.println("_________________________________");
-		System.out.println(" ");
 
 		
-		System.out.println(" ");
-		System.out.println("_________________________________");
-		System.out.println(" ");
-		
-		System.out.println(" ");
-		System.out.println("_________________________________");
-		System.out.println(" ");
 
 	}
 }
