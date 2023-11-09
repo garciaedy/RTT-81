@@ -17,6 +17,21 @@ public class Conditionals {
 			System.out.println("The grade is a D");
 		}else {
 			System.out.println("the grade is an F");
+			
+	
+		}
+		
+		System.out.println(" ");
+		System.out.println("_________________________________");
+		System.out.println(" ");
+		int num =10;
+		
+		if(num % 2 ==0) {
+			
+		System.out.println("Ther number is even");
+		
+		}else {
+			System.out.println("The number is odd");
 		}
 	}
 
