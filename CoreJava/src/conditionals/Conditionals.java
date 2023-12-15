@@ -21,18 +21,18 @@ public class Conditionals {
 
 		}
 
-		
+
 		System.out.println(" ");
 		System.out.println("_________________________________");
 		System.out.println(" ");
-		
+
 		int age = 18;
 		if(age >= 18) {
 			System.out.println("youy are old enough to vote");
 		}else {
 			System.out.println(" You are too young");
 		}
-			
+
 		System.out.println(" ");
 		System.out.println("_________________________________");
 		System.out.println(" ");
@@ -44,16 +44,16 @@ public class Conditionals {
 
 		}else {
 			System.out.println("The number is odd");
-			
+
 		}
-		
+
 		// Check if a given year is a leap year
 
-		
+
 		System.out.println(" ");
 		System.out.println("_________________________________");
 		System.out.println(" ");
-		
+
 		// Determine the type of a website based on protocol and domain.
 
 		String protocol = "https";
@@ -67,57 +67,57 @@ public class Conditionals {
 		}else {
 			System.out.println("Not a secure website");
 		}
-		
+
 		System.out.println(" ");
 		System.out.println("_________________________________");
 		System.out.println(" ");
 		// Check if a given year is a leap year
 
-		
+
 		System.out.println(" ");
 		System.out.println("_________________________________");
 		System.out.println(" ");
-		
-		
-		
-		
+
+
+
+
 		System.out.println(" ");
 		System.out.println("_________________________________");
 		System.out.println(" ");
-		
-		
-		
-		
+
+
+
+
 		System.out.println(" ");
 		System.out.println("_________________________________");
 		System.out.println(" ");
-		
-		
-		
-		
+
+
+
+
 		System.out.println(" ");
 		System.out.println("_________________________________");
 		System.out.println(" ");
-		
-		
-		
-		
+
+
+
+
 		System.out.println(" ");
 		System.out.println("_________________________________");
 		System.out.println(" ");
-		
-		
-		
-		
+
+
+
+
 		System.out.println(" ");
 		System.out.println("_________________________________");
 		System.out.println(" ");
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+
 		System.out.println(" ");
 		System.out.println("_________________________________");
 		System.out.println(" ");
@@ -133,43 +133,43 @@ public class Conditionals {
 			break;
 			default:
 				System.out.println("Command not recognized");
-			
+
 		}
-		
-		
-		
+
+
+
 		System.out.println(" ");
 		System.out.println("_________________________________");
 		System.out.println(" ");
-		
-		
-		
-		
-		
+
+
+
+
+
 		System.out.println(" ");
 		System.out.println("_________________________________");
 		System.out.println(" ");
-		
-		
-		
-		
+
+
+
+
 		System.out.println(" ");
 		System.out.println("_________________________________");
 		System.out.println(" ");
-		
-		
-		
-		
+
+
+
+
 		System.out.println(" ");
 		System.out.println("_________________________________");
 		System.out.println(" ");
-		
-		
-		
+
+
+
 		System.out.println(" ");
 		System.out.println("_________________________________");
 		System.out.println(" ");
-		
+
 	}
 
 }
